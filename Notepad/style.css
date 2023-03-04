@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    z-index: 0;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100%;
+    grid-template-areas: "bar pad";
+}
+
+.sidebar{
+    grid-area: bar;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
+}
+
+.sidebar h3{
+    font-family: 'EB Garamond', serif;
+    font-size: 40px;
+}
+
+.tools{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.tools span{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.add{
+    display: flex;
+}
+
+.add p{
+    margin-top: 10px;
+}
+
+.fav{
+    display: flex;
+}
+
+.fav p{
+    margin-top: 10px;
+}
+
+.pad{
+    z-index: 0;
+    grid-area: pad;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(96, 206, 234);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.textbox{
+    display: flex;
+    background-color: #ffe4c4;
+    padding: 30px 60px;
+    border-radius: 22%;
+    width: 40%;
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.poped{
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 1;
+    grid-area: pad;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poped textarea{
+    color: brown;
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    border-radius: 10%;
+    height: fit-content;
+    outline: 4px solid #ec9326a5;
+}
+
+.poped span{
+    font-size: 40px;
+    cursor:pointer;
+    color: rgb(67, 130, 9);
+    background-color: burlywood;
+    border-radius: 20%;
+}
+
+.add_tools span{
+    margin: 10px 0px 0px 10px;
+}
+
+.completed,.deleted{
+    cursor: pointer;
+    /* color: #0ec53c; */
+}
+
+.stored_fav{
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 1;
+    grid-area: pad;
+    flex-direction: column;
+    align-items: center;
+    background-color: coral;
+    padding: 5%;
+    border-radius: 20%;
+}
+
+.stored_fav p{
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+}
+
+.stored_fav span{
+    font-size: 30px;
+    position:absolute;
+    top: 2%;
+    left: 75%;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(250, 248, 235);
+}
+
+.hiddenTime{
+    display: none;
+}
+
+.date{
+    font-size: 18px;
+    margin-left: 2%;
+}
+
